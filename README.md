@@ -77,7 +77,7 @@ Final Analytics Report:
 
 ## 📄 License
 
-This project is for educational purposes only and part of the university assignment.
+This project is for educational purposes and is part of the university assignment.
 
 ## 👨‍💻 Author
 
