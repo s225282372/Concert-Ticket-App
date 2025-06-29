@@ -59,18 +59,71 @@ Encapsulates ticket purchasing logic:
 ## 📊 Sample Output
 
 ```
-VIP Upgrade: Standard Ticket - Rock Concert at MSG + VIP Access
-Total Price: R225.00
+CONCERT TICKET APP DEMONSTRATION
+
+1. SINGLETON PATTERN - Analytics Tracker
+=========================================
+Same instance? True
+Analytics system initialized and ready to track events.
+
+2. DECORATOR PATTERN - Ticket Upgrades
+=========================================
+Base Ticket 1: Standard Ticket - Rock Concert at Madison Square Garden
+Price: R75.00
+
+VIP Upgrade: Standard Ticket - Rock Concert at Madison Square Garden + VIP Access (Premium Seating, Express Entry, Complimentary Drinks)
+Price: R225.00
+
+Premium Package: Standard Ticket - Pop Festival at Central Park + VIP Access (Premium Seating, Express Entry, Complimentary Drinks) + Meet & Greet (Photo Opportunity, Autograph Session, Backstage Access)
+Price: R440.00
+
+3. COMMAND PATTERN - Purchase Flow
+=========================================
 
 Processing ticket purchase...
-Customer ID: 67890
-Ticket: VIP Ticket + Meet & Greet
-Total Price: R375.00
+Transaction ID: 100
+Customer ID: 12345
+Ticket: Standard Ticket - Rock Concert at Madison Square Garden
+Total Price: R75.00
+Payment processed successfully!
+Ticket details:  Customer: 12345, Ticket: Standard Ticket - Rock Concert at Madison Square Garden, Amount: R75.00
 
+Processing ticket purchase...
+Transaction ID: 101
+Customer ID: 67890
+Ticket: Standard Ticket - Rock Concert at Madison Square Garden + VIP Access (Premium Seating, Express Entry, Complimentary Drinks)
+Total Price: R225.00
+Payment processed successfully!
+Ticket details:  Customer: 67890, Ticket: Standard Ticket - Rock Concert at Madison Square Garden + VIP Access (Premium Seating, Express Entry, Complimentary Drinks), Amount: R225.00
+
+Processing ticket purchase...
+Transaction ID: 102
+Customer ID: 11111
+Ticket: Standard Ticket - Pop Festival at Central Park + VIP Access (Premium Seating, Express Entry, Complimentary Drinks) + Meet & Greet (Photo Opportunity, Autograph Session, Backstage Access)
+Total Price: R440.00
+Payment processed successfully!
+Ticket details:  Customer: 11111, Ticket: Standard Ticket - Pop Festival at Central Park + VIP Access (Premium Seating, Express Entry, Complimentary Drinks) + Meet & Greet (Photo Opportunity, Autograph Session, Backstage Access), Amount: R440.00
+
+Command History: 3 commands executed
+
+4. COMMAND UNDO DEMONSTRATION
+=========================================
 Undoing last command...
-Final Analytics Report:
-- Total Sales: 3
-- Total Revenue: R735.00
+Transaction ID: 102
+Reversing purchase for customer 11111
+Purchase successfully reversed!
+
+Undoing another command...
+Transaction ID: 101
+Reversing purchase for customer 67890
+Purchase successfully reversed!
+
+5.ANALYTICS REPORT (SINGLETON)
+=========================================
+Total Sales: 3
+Total Revenue: R740.00
+Sales Records: 3
+=========================================
 ```
 
 ---
